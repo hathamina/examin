@@ -1,15 +1,191 @@
 /* ******************************
 *TYPOGRAPHIE
 ******************************** */
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;700&display=swap");
+
 /* ******************************
 *GLOBAL
 ******************************** */
+body {
+  font-family: "Work Sans", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Anton", sans-serif;
+  font-weight: normal;
+}
+
+.container {
+  max-width: 1060px;
+  margin: 10px auto;
+}
+.btn {
+  background: #970134;
+  border: solid 1px darksalmon;
+  color: white !important;
+  padding: 10px 15px;
+  display: inline;
+}
+
 /* ******************************
 *HEADER
 ******************************** */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0.26)),
+    url(/img/cinema.jpg);
+  background-size: cover;
+  padding: 20px;
+  color: white;
+}
+header .container nav {
+  display: flex;
+  justify-content: space-between;
+}
+header nav img {
+  height: 50px;
+  width: auto;
+}
+header .container nav i {
+  display: none;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  margin-left: 20px;
+  color: white;
+}
+header .text {
+  text-align: center;
+  padding: 150px 0;
+}
+header h1 {
+  text-transform: none;
+  font-size: 70px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
 /* ******************************
 *MAIN
 ******************************** */
+/* ------------concept---------- */
+#concept {
+  display: flex;
+  margin: 50px auto;
+  align-content: center;
+}
+
+#concept img {
+  width: 40%;
+  margin-right: 30px;
+}
+/* --------------programme------- */
+#programme {
+  background-image: linear-gradient(
+      to left top,
+      rgba(151, 1, 51, 0.418),
+      rgba(151, 1, 51, 0.062)
+    ),
+    url(/img/salle.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  padding: 20px 0;
+}
+#programme .container ul {
+  display: flex;
+}
+#programme .container ul li {
+  background: rgba(0, 0, 0, 0.342);
+  border: solid 1px white;
+  padding: 10px 15px;
+  width: calc(50% - 20px);
+  margin: 0 auto;
+}
+#programme .container ul li h2 {
+  font-weight: normal;
+}
+#programme .container ul li h3 {
+  margin-bottom: 30px;
+}
+/* ----------abonnement---------- */
+main #abonnement {
+  text-align: center;
+  margin: 50px auto;
+}
+
+main #abonnement ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+main #abonnement ul li {
+  background: #970134;
+  color: white;
+  width: calc(30% - 20px);
+  border: none;
+  padding: 20px;
+}
+
+main #abonnement ul li p:nth-of-type(2) {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 100%;
+}
+
 /* ******************************
 *FOOTER
 ******************************** */
+footer {
+  border-top: solid 2px #970134;
+  text-align: center;
+}
+/* ******************************
+*MOBILE
+******************************** */
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+
+  header .container nav i {
+    color: white;
+    display: block;
+  }
+  header .container nav ul {
+    display: none;
+  }
+
+  /* ------fin menu burger----- */
+
+  #concept {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #concept img {
+    width: 50%;
+    margin: auto;
+  }
+
+  #programme .container ul {
+    flex-direction: column;
+  }
+
+  #programme .container ul li {
+    width: 100%;
+    margin: 10px auto;
+  }
+  main #abonnement ul {
+    flex-direction: column;
+  }
+  main #abonnement ul li {
+    width: 100%;
+    margin: 10px auto;
+  }
+}
